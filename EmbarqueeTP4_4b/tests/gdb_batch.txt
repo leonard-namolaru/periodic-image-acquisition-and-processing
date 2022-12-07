@@ -1,0 +1,40 @@
+# Sources des commentaires : 
+# le cours et le manuel de l'utilisateur du simulateur TSIM3
+# https://www.gaisler.com/doc/tsim3.pdf
+
+# tar = target
+# Se connecter à TSIM à l'aide de extended-remote protocol
+tar extended-remote localhost:1234
+
+# Charger l'image du programme dans le simulateur
+load
+
+mon perf reset
+
+# Declaration d'un point d’arrêt via la commande hbreak
+hbreak break_point
+commands
+	silent
+	printf "Elapsed time : %.2f sec \n", elapsed_time
+	cont
+end
+
+# Declaration d'un point d’arrêt via la commande hbreak
+hbreak send_flux
+commands
+	silent
+	printf "%d \t %d \t %d ", time, f.id_first_acquisition, f.id_window
+	printf "\t %f ", f.measures[0]
+	printf "\t %f ", f.measures[1]
+	printf "\t %f ", f.measures[2]
+	printf "\t %f ", f.measures[3]
+	printf "\t %f ", f.measures[4]
+	printf "\t %f ", f.measures[5]
+	printf "\t %f ", f.measures[6]
+	printf "\t %f ", f.measures[7]
+	printf "\t %f ", f.measures[8]
+	printf "\t %f\n", f.measures[9]
+	cont
+end
+
+start

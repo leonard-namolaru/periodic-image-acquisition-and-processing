@@ -1,0 +1,26 @@
+# Sources des commentaires : 
+# le cours et le manuel de l'utilisateur du simulateur TSIM3
+# https://www.gaisler.com/doc/tsim3.pdf
+
+set print array on
+
+# tar = target
+# Se connecter à TSIM à l'aide de extended-remote protocol
+tar extended-remote localhost:1234
+
+# Charger l'image du programme dans le simulateur
+load
+
+mon perf reset
+
+# Declaration d'un point d’arrêt via la commande hbreak
+hbreak break_point
+commands
+	silent
+	print flux_pondere
+	cont
+	
+end
+
+start
+cont
