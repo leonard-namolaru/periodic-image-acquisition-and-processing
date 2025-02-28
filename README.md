@@ -1,5 +1,5 @@
-### Programmation embarquée (Heptagon) - Contrôler un véhicule autonome dans une ville virtuelle
-![prog-sync-img.png](prog-sync-img.png.png)
+### Programmation embarquée - Acquisition et traitement périodiques d’images
+![rtos-img.png](rtos-img.png)
 > :school: **Lieu de formation :** Université Paris Cité, Campus Grands Moulins (ex-Paris Diderot)
 > 
 > :books: **UE :** Programmation embarquée 
@@ -9,16 +9,9 @@
 > :calendar: **Date :** Décembre 2022 
 
 #### Description
-Un programme synchrone contrôlant un dispositif physique simplifie mais non trivial : un véhicule autonome dans une ville virtuelle en deux dimensions. 
-Le but est donc de franchir toutes les étapes d’un parcours préétabli tout en respectant un certain nombre de contraintes 
-(limitations de vitesse, feux rouges, évitement des obstacles). Le véhicule est équipé d’actuateurs et de capteurs.
+Ce projet consiste à construire, à l’aide d’un OS temps réel, un système qui réalise des traitements d’images tout en garantissant le respect des contraintes de périodicité d’acquisition des images, ainsi que la régularité du débit sortant.
 
-_Remarque :_ Heptagon est un langage synchrone universitaire très proche du langage industrielle SCADE 6.
-
-#### Travail effectué
-Compte tenu du dispositif décrit ci-dessus, notre tâche était d’écrire le contrôleur du véhicule de manière à ce qu’il utilise les entrées reçues par les capteurs afin de permettre à la voiture de parcourir l’itinéraire prédéfini de manière autonome. Notre implémentation est principalement basée sur un correcteur PID. 
-
-Le code du contrôleur se trouve sur ce GitHub, accompagné d’un rapport expliquant l’implémentation.
+Le but est de se familiariser avec les services et composants fonctionnels d’un RTOS tels que les tâches, les queues de message, les timers et les sémaphores, et en particulier avec « RTEMS » (Real-Time Executive for Multiprocessor Systems), un RTOS conçu pour les systèmes embarqués.
 
 #### Ressources supplémentaires
 - [Rapport](Rapport_FR.pdf)
