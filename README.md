@@ -14,4 +14,4 @@ Ce projet consiste à construire, à l’aide d’un OS temps réel, un système
 Le but est de se familiariser avec les services et composants fonctionnels d’un RTOS tels que les tâches, les queues de message, les timers et les sémaphores, et en particulier avec « RTEMS » (Real-Time Executive for Multiprocessor Systems), un RTOS conçu pour les systèmes embarqués.
 
 #### Ressources supplémentaires
-- [Rapport](Rapport_FR.pdf)
+- [Rapport](rapport_FR.pdf)
